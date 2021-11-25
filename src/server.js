@@ -13,13 +13,13 @@ const port = process.env.port || 3000;
  */
 
 mongoose.connect(
-    "mongodb+srv://danghieuliem:01682210219@cluster0.cnzq3.mongodb.net/todo-app?retryWrites=true&w=majority", { useNewUrlParser: true }
+    "mongodb+srv://danghieuliem:01682210219@cluster0.6yarb.mongodb.net/todo-app?retryWrites=true&w=majority", { useNewUrlParser: true }
 )
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error"));
 db.once("open", () => {
-    console.log("Connetd to MongoDB");
+    console.log("Connected to MongoDB");
 });
 //*************** */
 

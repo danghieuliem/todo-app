@@ -80,7 +80,7 @@
         console.log(token);
 
         localStorage.setItem('token', token);
-        location.href = "/user.html";
+        location.href = "/index.html";
     }
 
     async function signup(username, password) {

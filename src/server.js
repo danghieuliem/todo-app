@@ -5,8 +5,6 @@ const path = require("path");
 const router = require("./routes");
 
 const app = express();
-const port = process.env.port || 5000;
-
 
 /**
  * mongoose
@@ -90,6 +88,6 @@ app.use("/api", router);
 //         .catch((error) => res.status(500).send(error));
 // })
 
-app.listen(port, () => {
-    console.log("http://localhost:" + port);
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
